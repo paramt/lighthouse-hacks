@@ -47,19 +47,28 @@ p {
     font-size: 20px;
 }
 
-.section-1 {
-    margin: 100px 50px;
+.container {
+    margin: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section {
+    width: 1200px;
+    padding: 50px 0;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
 }
 
-.section-1 div {
+.section div {
     width: 500px;
 }
 
-.section-1 img {
+.section img {
     -webkit-filter: invert(100%);
     filter: invert(100%);
     height: 200px;
@@ -136,11 +145,6 @@ p {
     animation-name: bounce;
     -webkit-transform-origin: center bottom;
     transform-origin: center bottom;
-}
-
-.fadeOutUp {
-    -webkit-animation-name: fadeOutUp;
-    animation-name: fadeOutUp;
 }
 
 @-webkit-keyframes fadeOutLeft {
