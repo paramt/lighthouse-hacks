@@ -316,7 +316,8 @@ p {
 }
 
 .box, .slideout {
-    width: 1000px;
+    width: 80%;
+    max-width: 1000px;
     padding: 20px;
     background-color: #eee;
     color: #292929;
