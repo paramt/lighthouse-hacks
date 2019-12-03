@@ -19,23 +19,15 @@
 
         <div class="main">
             <div class="container">
-                <div class="section">
-                    <div>
-                        <h2>Opportunities</h2>
-                        <p><b>{{ site.title }}</b> is a fun-filled day of learning, building, and networking. You'll get to get to work on a project with a team of four and pitch your ideas to a panel of judges. Additionally, you get an opportunity to attend workshops, meet new people, and build connections.</p>
+                {% for row in site.data.descriptions %}
+                    <div class="section {% cycle '', 'reverse' %}">
+                        <div>
+                            <h2>{{ row.title }}</h2>
+                            <p>{{ row.description | markdownify }}</p>
+                        </div>
+                        <img src="{{ row.image }}">
                     </div>
-                    <img src="img/gears.png">
-                </div>
-
-
-                <div class="section">
-                    <img src="img/connections.svg">
-
-                    <div>
-                        <h2>Meet New People</h2>
-                        <p><b>{{ site.title }}</b> is a fun-filled day of learning, building, and networking. You'll get to get to work on a project with a team of four and pitch your ideas to a panel of judges. Additionally, you get an opportunity to attend workshops, meet new people, and build connections.</p>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
 
 
