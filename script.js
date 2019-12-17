@@ -1,3 +1,4 @@
+// Bouncing arrow animation
 window.onload = function(){
     window.setTimeout(function(){
       document.getElementById("arrow").style.opacity = "1";
@@ -13,6 +14,7 @@ window.addEventListener("scroll", function(){
     }
 }, false);
 
+// FAQ
 $(document).ready(function() {
   //toggle the component with class slideout
   $(".box").click(function() {
@@ -29,3 +31,14 @@ $(document).ready(function() {
     }
   });
 });
+
+// Background color transition on scroll
+setColor()
+
+$(window).on("beforeload scroll", setColor);
+
+function setColor(){
+  var scale = chroma.scale(["#312868", "#e74c3c"]).domain([0, $(document).height()]);
+  $(".main").css("background-color", scale(window.pageYOffset));
+  $("path").css("fill", scale(window.pageYOffset * 10));
+}
