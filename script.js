@@ -38,6 +38,6 @@ setColor()
 $(window).on("beforeload scroll", setColor);
 
 function setColor(){
-  var scale = chroma.scale(["#312868", "#e74c3c"]).domain([0, $(document).height()]);
+  var scale = chroma.scale(["#312868", "#cc200e"]).domain([0, $(document).height()]);
   $(".main").css("background-color", scale(window.pageYOffset));
 }
