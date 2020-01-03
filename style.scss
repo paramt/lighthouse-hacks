@@ -103,6 +103,10 @@ p {
             color: #9189ff;
         }
     }
+
+    #details-break:before {
+        content: "\25CF\a0"; // Add a black circle
+    }
 }
 
 #schedule {
@@ -352,4 +356,70 @@ p {
    -khtml-user-select: none; /* Konqueror HTML */
    -moz-user-select: none; /* Firefox */
    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+@media only screen and (max-width: 1200px) {
+    .section {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .details {
+        padding: 25px 0;
+
+        p {
+            line-height: 1.5;
+            margin: auto;
+        }
+
+        a {
+            color: rgb(125, 138, 255);
+            text-decoration: underline;
+        }
+
+        #details-break {
+            display: block; // Put location on a new line
+        }
+
+        #details-break:before {
+            content: none !important; // Remove black circle
+        }
+    }
+
+    .sponsor {
+        p {
+            margin: 20px 0;
+        }
+
+        form {
+            width: 80vw;
+        }
+
+        input, button {
+            width: 100% !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .icon {
+        display: none;
+    }
+
+    h2 {
+        text-align: center;
+        margin: 10px 0 ;
+    }
+
+    p {
+        width: 80%;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    #schedule table {
+        width: 90%;
+    }
 }
