@@ -107,6 +107,10 @@ p {
     #details-break:before {
         content: "\25CF\a0"; // Add a black circle
     }
+
+    #details-time:before {
+        content: "\25CF\a0"; // Add a black circle
+    }
 }
 
 #schedule {
@@ -421,5 +425,15 @@ p {
 @media only screen and (max-width: 650px) {
     #schedule table {
         width: 90%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    #details-time {
+        display: block; // Put location on a new line
+    }
+
+    #details-time:before {
+        content: none !important; // Remove black circle
     }
 }
