@@ -104,8 +104,8 @@ p {
         }
     }
 
-    #details-break:before {
-        content: "\25CF\a0"; // Add a black circle
+    #details-time:after {
+        content: "\a0\25CF"; // Add a black circle
     }
 
     #details-time:before {
@@ -369,6 +369,9 @@ p {
 }
 
 @media only screen and (max-width: 900px) {
+    #logo {
+        width: 80%;
+    }
     .details {
         padding: 25px 0;
 
@@ -386,7 +389,7 @@ p {
             display: block; // Put location on a new line
         }
 
-        #details-break:before {
+        #details-time:after {
             content: none !important; // Remove black circle
         }
     }
