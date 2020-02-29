@@ -4,7 +4,7 @@
 > No coding experience required
 
 You can edit most of the content by simply editing the CSV files in [`_data/`](_data). 
-Just click on the file you wish to edit, click the pencil icon in the top left, make your changes, and then click the <kbd>Commit changes</kbd> button at the bottom.
+Just click on the file you wish to edit, click the pencil icon in the top left, make your changes, and then click the <kbd>Commit changes</kbd> button at the bottom. You should be able to see the changes on the website in a couple minutes.
 
 ## Advanced
 > Some coding experience would be helpful
@@ -27,3 +27,6 @@ bundle install
 bundle exec jekyll serve 
 ```
 The site should be running at `localhost:4000`
+
+### 4. Push
+Once you're ready, commit and push your changes.
