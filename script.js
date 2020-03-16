@@ -1,5 +1,12 @@
-// Bouncing arrow animation
 window.onload = function(){
+	Swal.fire({
+		title: "COVID-19 Update",
+		text: "It is likely that the event will unfortunately be cancelled. Check back for an update soon confirming the situation.",
+		icon: "warning",
+		confirmButtonText: "Ok"
+	})
+
+	// Bouncing arrow animation
     window.setTimeout(function(){
       document.getElementById("arrow").style.opacity = "1";
       document.getElementById("arrow").classList = "animated bounce";
