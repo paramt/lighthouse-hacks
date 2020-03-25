@@ -1,7 +1,7 @@
 window.onload = function(){
 	Swal.fire({
 		title: "COVID-19 Update",
-		text: "It is likely that the event will unfortunately be cancelled. Check back for an update soon confirming the situation.",
+		text: "Unfortunately, Lighthouse Hacks will be cancelled due to the current situation.",
 		icon: "warning",
 		confirmButtonText: "Ok"
 	})
