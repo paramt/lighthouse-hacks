@@ -104,12 +104,8 @@ p {
         }
     }
 
-    #details-time:after {
+    #span-date:after {
         content: "\a0\25CF"; // Add a black circle
-    }
-
-    #details-time:before {
-        content: "\25CF\a0"; // Add a black circle
     }
 }
 
