@@ -1,11 +1,4 @@
 window.onload = function(){
-	Swal.fire({
-		title: "COVID-19 Update",
-		text: "Unfortunately, Lighthouse Hacks will be cancelled due to the current situation.",
-		icon: "warning",
-		confirmButtonText: "Ok"
-	})
-
 	// Bouncing arrow animation
     window.setTimeout(function(){
       document.getElementById("arrow").style.opacity = "1";
