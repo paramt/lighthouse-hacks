@@ -107,6 +107,10 @@ p {
     #span-date:after {
         content: "\a0\25CF"; // Add a black circle
     }
+	
+	#details-break:after {
+        content: "\a0\25CF"; // Add a black circle
+    }
 }
 
 #schedule {
