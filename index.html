@@ -3,68 +3,87 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        {% include meta.html %}
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-        <title>{{ site.title }}</title>
-    </head>
-    <body>
-        <div class="top">
-            <img id="logo" src="img/logo.svg" alt="logo">
-            <span id="arrow"><i class="fas fa-angle-down"></i></span>
-        </div>
+	<head>
+		{% include meta.html %}
+		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+			integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+			crossorigin="anonymous"
+		/>
+		<title>{{ site.title }}</title>
+	</head>
+	<body>
+		<div class="top">
+			<img id="logo" src="img/logo.svg" alt="logo" />
+			<span id="arrow"><i class="fas fa-angle-down"></i></span>
+		</div>
 
-        <div class="main">
-            <div class="container">
-                {% for row in site.data.descriptions %}
-                    <div class="section {% cycle '', 'reverse' %}">
-                        <div>
-                            <h2>{{ row.title }}</h2>
-                            <p>{{ row.description | markdownify }}</p>
-                        </div>
-                        <img class="icon" src="{{ row.image }}">
-                    </div>
-                {% endfor %}
-            </div>
+		<div class="main">
+			<div class="container">
+				{% for row in site.data.descriptions %}
+				<div class="section {% cycle '', 'reverse' %}">
+					<div>
+						<h2>{{ row.title }}</h2>
+						<p>{{ row.description | markdownify }}</p>
+					</div>
+					<img class="icon" src="{{ row.image }}" />
+				</div>
+				{% endfor %}
+			</div>
 
-            <div class="details">
-				<p><span id="span-date">{{ site.event.date }}</span> <span id="details-break">Virtual</span> Registrations open soon</p>
-            </div>
+			<div class="details">
+				<p>
+					<span id="span-date">{{ site.event.date }}</span>
+					<span id="details-break">Virtual</span> Registrations open
+					soon
+				</p>
+			</div>
 
-            <div id="faq" class="container center">
-                <h2>Frequently Asked Questions</h2> <br>
+			<div id="faq" class="container center">
+				<h2>Frequently Asked Questions</h2>
+				<br />
 
-                {% for row in site.data.faq %}
-                    <div class="box disable-select">
-                        <h3>{{ row.question }}<span class="plusminus">+</span></h3>
-                    </div>
+				{% for row in site.data.faq %}
+				<div class="box disable-select">
+					<h3>{{ row.question }}<span class="plusminus">+</span></h3>
+				</div>
 
-                    <div class="slideout" style="display:none">
-                        <div>
-                            <p>{{ row.answer }}</p>
-                        </div>
-                    </div>
-                {% endfor %}
+				<div class="slideout" style="display: none">
+					<div>
+						<p>{{ row.answer }}</p>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
 
-            </div>
+			<div id="sponsor" class="center sponsor">
+				<h2>Sponsors TBA</h2>
 
-            <div id="sponsor" class="center sponsor">
-                <h2>Sponsors TBA</h2>
+				<p>
+					Please fill out this form if you're interested in sponsoring
+					{{ site.title }}
+				</p>
 
-                <p>Please fill out this form if you're interested in sponsoring {{ site.title }}</p>
+				<form action="https://formspree.io/mnqnqraj" method="POST">
+					<input name="Company" placeholder="Company" required />
+					<br />
+					<input
+						name="Email"
+						type="email"
+						placeholder="Email"
+						required
+					/>
+					<br />
+					<button type="submit">Submit</button>
+				</form>
+			</div>
+		</div>
 
-                <form action="https://formspree.io/mnqnqraj" method="POST">
-                    <input name="Company" placeholder="Company" required> <br>
-                    <input name="Email" type="email" placeholder="Email" required> <br>
-                    <button type="submit">Submit</button>
-                </form>
-            </div>
-        </div>
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.1.0/chroma.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.1.0/chroma.min.js"></script>
 		<script src="script.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-    </body>
+	</body>
 </html>
