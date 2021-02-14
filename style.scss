@@ -151,60 +151,32 @@ p {
 }
 
 .sponsor {
-	margin: 100px 0;
+	margin: 100px 0 0;
+	padding: 50px 0 100px 0;
+	background-color: #ffc4c4;
+	-webkit-clip-path: polygon(0 5%, 100% 0, 100% 95, 0% 100%);
+	clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
 
-	form {
+	h2 {
+		color: #7d160b;
+		margin-bottom: 100px;
+		transform: rotate(-1deg);
+	}
+
+	div {
+		width: 100%;
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
 		justify-content: center;
-		color: white;
-		font-size: 1.3em;
+		align-items: center;
 
-		* {
-			color: white;
-			font-size: 1.3em;
-		}
-
-		button {
-			color: white;
-		}
-
-		input,
-		textarea {
-			background: rgba(255, 255, 255, 0.4);
-			color: black;
-			width: 800px;
-			margin: 12px 0;
-			padding: 15px;
-			outline: none;
-			border: none;
-			border-radius: 10px;
-			transition: background-color 0.2s;
-			font-size: inherit;
-			resize: none;
-		}
-
-		input::placeholder,
-		textarea::placeholder {
-			color: black;
-			opacity: 0.5;
-		}
-
-		button {
-			background: rgba(255, 255, 255, 0.75);
-			color: black;
-			width: 800px;
-			margin: 12px 0;
-			padding: 15px;
-			outline: none;
-			border: none;
-			border-radius: 10px;
-			box-sizing: content-box;
-			transition: background-color 0.1s;
+		.sponsor-icon {
+			margin: 20px;
+			height: 80px;
+			transition: transform 0.3s;
 
 			&:hover {
-				background: rgb(255, 255, 255);
-				cursor: pointer;
+				transform: scale(1.05);
 			}
 		}
 	}
@@ -395,6 +367,18 @@ p {
 	-ms-user-select: none; /* Internet Explorer/Edge */
 }
 
+@media only screen and (max-width: 1440px) {
+	.sponsor {
+		div {
+			flex-direction: column;
+		}
+
+		h2 {
+			transform: rotate(-2deg);
+		}
+	}
+}
+
 @media only screen and (max-width: 1200px) {
 	.section {
 		width: 100%;
@@ -402,6 +386,12 @@ p {
 }
 
 @media only screen and (max-width: 900px) {
+	.sponsor {
+		h2 {
+			transform: rotate(-3deg);
+		}
+	}
+
 	#logo {
 		width: 80%;
 	}
@@ -431,15 +421,6 @@ p {
 		p {
 			margin: 20px 0;
 		}
-
-		form {
-			width: 80vw;
-		}
-
-		input,
-		button {
-			width: 100% !important;
-		}
 	}
 }
 
@@ -450,7 +431,6 @@ p {
 
 	h2 {
 		text-align: center;
-		margin: 10px 0;
 	}
 
 	p {
@@ -462,6 +442,11 @@ p {
 @media only screen and (max-width: 650px) {
 	#schedule table {
 		width: 90%;
+	}
+
+	.sponsor {
+		-webkit-clip-path: polygon(0 3%, 100% 0, 100% 97%, 0% 100%);
+		clip-path: polygon(0 3%, 100% 0, 100% 97%, 0% 100%);
 	}
 }
 

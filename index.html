@@ -59,23 +59,14 @@
 			</div>
 
 			<div id="sponsor" class="center sponsor">
-				<h2>Sponsors TBA</h2>
-
-				<p>
-					Please fill out this form if you're interested in sponsoring
-					{{ site.title }}
-				</p>
-
-				<form action="https://formspree.io/mnqnqraj" method="POST">
-					<input name="Company" placeholder="Company" required />
-					<input
-						name="Email"
-						type="email"
-						placeholder="Email"
-						required
-					/>
-					<button type="submit">Submit</button>
-				</form>
+				<h2>Sponsors</h2>
+				<div>
+					{% for sponsor in site.data.sponsors %}
+					<a href="{{ sponsor.link }}" target="_blank">
+						<img class="sponsor-icon" src="{{ sponsor.img }}" />
+					</a>
+					{% endfor %}
+				</div>
 			</div>
 		</div>
 
