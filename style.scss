@@ -96,7 +96,6 @@ p {
 
 	a {
 		color: white;
-		text-decoration: none;
 		transition: color 0.1s;
 
 		&:hover {
@@ -395,6 +394,11 @@ p {
 	#logo {
 		width: 80%;
 	}
+
+	p {
+		line-height: 1.5;
+	}
+
 	.details {
 		padding: 25px 0;
 
@@ -405,14 +409,14 @@ p {
 
 		a {
 			color: rgb(125, 138, 255);
-			text-decoration: underline;
 		}
 
 		#details-break {
 			display: block; // Put location on a new line
 		}
 
-		#details-time:after {
+		#span-date:after,
+		#details-break:after {
 			content: none !important; // Remove black circle
 		}
 	}
@@ -457,5 +461,9 @@ p {
 
 	#details-time:before {
 		content: none !important; // Remove black circle
+	}
+
+	h2 {
+		font-size: 40px;
 	}
 }
