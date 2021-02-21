@@ -43,6 +43,34 @@
 				</p>
 			</div>
 
+			<div id="schedule">
+				<h2>Schedule</h2>
+				<div class="schedule-wrapper">
+					<div>
+						<h3>Saturday, April 24</h3>
+						<table>
+							{% for row in site.data.schedule-day1 %}
+							<tr>
+								<td class="time">{{ row.time }}</td>
+								<td>{{ row.event }}</td>
+							</tr>
+							{% endfor %}
+						</table>
+					</div>
+					<div>
+						<h3>Sunday, April 25</h3>
+						<table>
+							{% for row in site.data.schedule-day2 %}
+							<tr>
+								<td class="time">{{ row.time }}</td>
+								<td>{{ row.event }}</td>
+							</tr>
+							{% endfor %}
+						</table>
+					</div>
+				</div>
+			</div>
+
 			<div id="faq" class="container center">
 				<h2>Frequently Asked Questions</h2>
 				<br />

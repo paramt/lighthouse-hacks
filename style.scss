@@ -113,6 +113,16 @@ p {
 }
 
 #schedule {
+	.schedule-wrapper {
+		display: flex;
+		align-items: flex-start;
+
+		div {
+			margin: 0 20px;
+			text-align: center;
+		}
+	}
+
 	margin: 100px 0;
 	display: flex;
 	flex-direction: column;
@@ -124,7 +134,7 @@ p {
 	}
 
 	table {
-		width: 600px;
+		width: 500px;
 		table-layout: fixed;
 	}
 
@@ -382,6 +392,12 @@ p {
 	.section {
 		width: 100%;
 	}
+
+	#schedule {
+		.schedule-wrapper {
+			flex-direction: column;
+		}
+	}
 }
 
 @media only screen and (max-width: 900px) {
@@ -445,10 +461,6 @@ p {
 }
 
 @media only screen and (max-width: 650px) {
-	#schedule table {
-		width: 90%;
-	}
-
 	.sponsor {
 		-webkit-clip-path: polygon(0 3%, 100% 0, 100% 97%, 0% 100%);
 		clip-path: polygon(0 3%, 100% 0, 100% 97%, 0% 100%);
@@ -456,6 +468,10 @@ p {
 }
 
 @media only screen and (max-width: 550px) {
+	#schedule table {
+		width: 100%;
+	}
+
 	#details-time {
 		display: block; // Put location on a new line
 	}
