@@ -11,13 +11,14 @@ body {
 	height: 80vh;
 	margin: 0 0 20vh 0;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	align-content: center;
 	justify-content: center;
 }
 
 #logo {
-	height: 80%;
+	height: 70%;
 	filter: opacity(0);
 	-webkit-animation: fadeIn 1s forwards 0.5s;
 	animation: fadeIn 1s forwards 0.5s;
@@ -39,6 +40,16 @@ body {
 	background-color: #312868;
 	color: white;
 	padding: 50px 0;
+}
+
+h1 {
+	font-size: 60px;
+	margin-bottom: 0;
+	color: #2d2368;
+	filter: opacity(0);
+	-webkit-animation: fadeIn 0.5s linear 0.75s forwards;
+	animation: fadeIn 1s 0.5s linear 0.75s forwards;
+	text-align: center;
 }
 
 h2 {
@@ -407,10 +418,6 @@ p {
 		}
 	}
 
-	#logo {
-		width: 80%;
-	}
-
 	p {
 		line-height: 1.5;
 	}
@@ -482,5 +489,10 @@ p {
 
 	h2 {
 		font-size: 40px;
+	}
+
+	#logo {
+		width: 60%;
+		height: auto;
 	}
 }
