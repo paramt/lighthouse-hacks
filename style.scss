@@ -39,7 +39,7 @@ body {
 .main {
 	background-color: #312868;
 	color: white;
-	padding: 50px 0;
+	padding: 50px 0 20px;
 }
 
 h1 {
@@ -385,6 +385,18 @@ p {
 	-khtml-user-select: none; /* Konqueror HTML */
 	-moz-user-select: none; /* Firefox */
 	-ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+.footnote {
+	text-align: center;
+
+	a {
+		color: white;
+	}
+
+	a:hover {
+		color: rgb(255, 211, 211);
+	}
 }
 
 @media only screen and (max-width: 1440px) {
