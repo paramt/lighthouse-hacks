@@ -190,6 +190,7 @@ p {
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
+		flex-wrap: wrap;
 
 		.sponsor-icon {
 			margin: 20px;
@@ -403,10 +404,6 @@ p {
 
 @media only screen and (max-width: 1440px) {
 	.sponsor {
-		div {
-			flex-direction: column;
-		}
-
 		h2 {
 			transform: rotate(-2deg);
 		}
@@ -478,6 +475,12 @@ p {
 	p {
 		width: 80%;
 		margin: auto;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	.sponsor div {
+		flex-direction: column;
 	}
 }
 
