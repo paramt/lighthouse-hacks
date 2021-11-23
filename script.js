@@ -4,6 +4,12 @@ window.onload = function () {
 		document.getElementById("arrow").style.opacity = "1";
 		document.getElementById("arrow").classList = "animated bounce";
 	}, 1300);
+
+	Swal.fire({
+		title: "That's all folks!",
+		text: "Thank you to everyone who participated for making the event a huge success!",
+		confirmButtonText: "Continue",
+	});
 };
 
 window.addEventListener(
